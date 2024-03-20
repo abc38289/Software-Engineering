@@ -1,0 +1,127 @@
+<head>
+
+<title>World Bank Data Dashboard</title>
+
+<!--import script files needed from plotly and bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+<!--navbar links-->     
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+   <a class="navbar-brand" href="#">World Bank Dashboard</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+  data-target="#navbarTogglerDemo02" 
+  aria-controls="navbarTogglerDemo02" aria-expanded="false" 
+  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.udacity.com">Udacity</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://data.worldbank.org/">World Bank Data</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--middle section-->       
+<div class="row">
+
+    <!--social media buttons column-->      
+    <div class="col-1 border-right">
+        <div id="follow-me" class="mt-3">
+            <a href="#">
+                <img src="/static/img/linkedinlogo.png" alt="linkedin" class="img-fluid mb-4 ml-2">
+            </a>
+            <a href="#">
+                <img src="/static/img/githublogo.png" alt="github" class="img-fluid ml-2">
+            </a>
+        </div>
+    </div>
+
+    <!--visualizations column-->        
+    <div class="col-11">
+
+        <!--chart descriptions-->       
+        <div id="middle-info" class="mt-3">
+
+            <h2 id="tag-line">World Bank Data Dashboard</h2>
+            <h4 id="tag-line" class="text-muted">Top 10 World Economies Land Use</h4>
+            
+        </div>
+        
+        <!--charts-->       
+        <div id="charts" class="container mt-3 text-center">
+                    
+            <!--top two charts-->       
+            <div class="row">
+                <div class="col-6">
+                    <div id="figure-0"></div>
+                </div>
+                <div class="col-6">
+                    <div id="figure-1"></div>
+                </div>
+            </div>
+
+            <!--bottom two charts-->        
+            <div class="row mb-6">
+                <div class="col-6"> 
+                    <div id="chart3">
+                        <div id="figure-2"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="chart4">
+                        <div id="figure-3"></div>
+                    </div>
+                </div>
+            </div>
+           
+            <!--Create another row and place a fifth chart in that row-->        
+            <div class="row mb-6">
+              <div class="col-12">
+                <div id="chart5">
+                    <div id="figure-4"></div>
+                </div>
+              </div>
+            </div>
+                  
+        </div>
+    <div>
+</div>
+
+<!--footer section-->               
+<div id="footer" class="container"></div>
+
+</body>
+
+
+<footer>
+
+    <script type="text/javascript">
+        // plots the figure with id
+        // id much match the div id above in the html
+        var figures = [{"data": [{"mode": "lines", "name": "Canada", "x": [1990, 2015], "y": [1.63736461444353, 1.21695065037721], "type": "scatter"}, {"mode": "lines", "name": "United States", "x": [1990, 2015], "y": [0.743825689139222, 0.474490821838453], "type": "scatter"}, {"mode": "lines", "name": "Brazil", "x": [2015, 1990], "y": [0.388503500847836, 0.339338949567815], "type": "scatter"}, {"mode": "lines", "name": "France", "x": [1990, 2015], "y": [0.3039471289773, 0.277357726039785], "type": "scatter"}, {"mode": "lines", "name": "India", "x": [1990, 2015], "y": [0.187855086325376, 0.119523718953133], "type": "scatter"}, {"mode": "lines", "name": "Italy", "x": [1990, 2015], "y": [0.1588878835471, 0.108693178669027], "type": "scatter"}, {"mode": "lines", "name": "Germany", "x": [1990, 2015], "y": [0.150705571104433, 0.145054371272668], "type": "scatter"}, {"mode": "lines", "name": "United Kingdom", "x": [1990, 2015], "y": [0.115638063760453, 0.0922939524460592], "type": "scatter"}, {"mode": "lines", "name": "China", "x": [1990, 2015], "y": [0.109057114038681, 0.0867840317381602], "type": "scatter"}, {"mode": "lines", "name": "Japan", "x": [1990, 2015], "y": [0.0385957243578847, 0.0330420556704761], "type": "scatter"}], "layout": {"title": "Change in Hectares Arable Land <br> per Person 1990 to 2015", "xaxis": {"title": "Year", "autotick": false, "tick0": 1990, "dtick": 25}, "yaxis": {"title": "Hectares"}}}, {"data": [{"x": ["Canada", "United States", "Brazil", "France", "Germany", "India", "Italy", "United Kingdom", "China", "Japan"], "y": [1.21695065037721, 0.474490821838453, 0.388503500847836, 0.277357726039785, 0.145054371272668, 0.119523718953133, 0.108693178669027, 0.0922939524460592, 0.0867840317381602, 0.0330420556704761], "type": "bar"}], "layout": {"title": "Hectares Arable Land per Person in 2015", "xaxis": {"title": "Country"}, "yaxis": {"title": "Hectares per person"}}}, {"data": [{"mode": "lines", "name": "Canada", "x": [1990, 2015], "y": [23.418, 18.172], "type": "scatter"}, {"mode": "lines", "name": "United States", "x": [1990, 2015], "y": [24.7, 18.383], "type": "scatter"}, {"mode": "lines", "name": "Brazil", "x": [1990, 2015], "y": [26.078, 14.313], "type": "scatter"}, {"mode": "lines", "name": "France", "x": [1990, 2015], "y": [25.944, 20.48], "type": "scatter"}, {"mode": "lines", "name": "India", "x": [1990, 2015], "y": [74.453, 67.253], "type": "scatter"}, {"mode": "lines", "name": "Italy", "x": [1990, 2015], "y": [33.274, 31.036], "type": "scatter"}, {"mode": "lines", "name": "Germany", "x": [1990, 2015], "y": [26.882, 24.699], "type": "scatter"}, {"mode": "lines", "name": "United Kingdom", "x": [1990, 2015], "y": [21.86, 17.408], "type": "scatter"}, {"mode": "lines", "name": "China", "x": [1990, 2015], "y": [73.558, 44.386], "type": "scatter"}, {"mode": "lines", "name": "Japan", "x": [1990, 2015], "y": [22.661, 6.502], "type": "scatter"}], "layout": {"title": "Change in Rural Population <br> (Percent of Total Population)", "xaxis": {"title": "Year", "autotick": false, "tick0": 1990, "dtick": 25}, "yaxis": {"title": "Percent"}}}, {"data": [{"mode": "markers", "name": "Canada", "text": ["Canada 1995", "Canada 1996", "Canada 1997", "Canada 1998", "Canada 1999", "Canada 2000", "Canada 2001", "Canada 2002", "Canada 2003", "Canada 2004", "Canada 2005", "Canada 2006", "Canada 2007", "Canada 2008", "Canada 2009", "Canada 2010", "Canada 2011", "Canada 2012", "Canada 2013", "Canada 2014", "Canada 2015"], "textposition": "top center", "x": [6553280.0, 6542357.0, 6495228.0, 6435543.0, 6373418.0, 6314558.0, 6275436.0, 6307525.0, 6345653.0, 6384602.0, 6422979.0, 6444726.0, 6447349.0, 6456994.0, 6470810.0, 6482425.0, 6485634.0, 6500784.0, 6513031.0, 6520736.0, 6511484.0], "y": [3480375.0, 3479904.0, 3479433.0, 3478962.0, 3478491.0, 3478020.0, 3477568.0, 3477116.0, 3476664.0, 3476212.0, 3475760.0, 3475212.0, 3474664.0, 3474116.0, 3473568.0, 3473020.0, 3472554.0, 3472088.0, 3471622.0, 3471156.0, 3470690.0], "type": "scatter"}, {"mode": "markers", "name": "United States", "text": ["United States 1995", "United States 1996", "United States 1997", "United States 1998", "United States 1999", "United States 2000", "United States 2001", "United States 2002", "United States 2003", "United States 2004", "United States 2005", "United States 2006", "United States 2007", "United States 2008", "United States 2009", "United States 2010", "United States 2011", "United States 2012", "United States 2013", "United States 2014", "United States 2015"], "textposition": "top center", "x": [60559606.0, 60247274.0, 59962727.0, 59647910.0, 59318323.0, 59093274.0, 59176653.0, 59224903.0, 59231337.0, 59272576.0, 59316092.0, 59380586.0, 59435929.0, 59486862.0, 59495270.0, 59481471.0, 59403036.0, 59320574.0, 59203045.0, 59103078.0, 58990425.0], "y": [3029930.0, 3031016.0, 3032102.0, 3033188.0, 3034274.0, 3035360.0, 3037802.0, 3040244.0, 3042686.0, 3045128.0, 3047570.0, 3055496.0, 3063422.0, 3071348.0, 3079274.0, 3087200.0, 3089950.0, 3092700.0, 3095450.0, 3098200.0, 3100950.0], "type": "scatter"}, {"mode": "markers", "name": "Brazil", "text": ["Brazil 1995", "Brazil 1996", "Brazil 1997", "Brazil 1998", "Brazil 1999", "Brazil 2000", "Brazil 2001", "Brazil 2002", "Brazil 2003", "Brazil 2004", "Brazil 2005", "Brazil 2006", "Brazil 2007", "Brazil 2008", "Brazil 2009", "Brazil 2010", "Brazil 2011", "Brazil 2012", "Brazil 2013", "Brazil 2014", "Brazil 2015"], "textposition": "top center", "x": [36338211.0, 35782889.0, 35104063.0, 34406802.0, 33694963.0, 32968089.0, 32789666.0, 32643365.0, 32476348.0, 32290435.0, 32086234.0, 31861822.0, 31618729.0, 31361022.0, 31097605.0, 30828136.0, 30552052.0, 30282703.0, 30015176.0, 29747727.0, 29479357.0], "y": [5339895.0, 5314464.0, 5289033.0, 5263602.0, 5238171.0, 5212740.0, 5183660.0, 5154580.0, 5125500.0, 5096420.0, 5067340.0, 5050788.0, 5034236.0, 5017684.0, 5001132.0, 4984580.0, 4974740.0, 4964900.0, 4955060.0, 4945220.0, 4935380.0], "type": "scatter"}, {"mode": "markers", "name": "France", "text": ["France 1995", "France 1996", "France 1997", "France 1998", "France 1999", "France 2000", "France 2001", "France 2002", "France 2003", "France 2004", "France 2005", "France 2006", "France 2007", "France 2008", "France 2009", "France 2010", "France 2011", "France 2012", "France 2013", "France 2014", "France 2015"], "textposition": "top center", "x": [14937872.0, 14889277.0, 14841301.0, 14795595.0, 14752730.0, 14697577.0, 14647859.0, 14598404.0, 14545385.0, 14495491.0, 14449118.0, 14393065.0, 14326191.0, 14250048.0, 14166960.0, 14081707.0, 13993809.0, 13906743.0, 13823401.0, 13738011.5, 13644609.0], "y": [148625.0, 149478.0, 150331.0, 151184.0, 152037.0, 152890.0, 154034.0, 155178.0, 156322.0, 157466.0, 158610.0, 159736.0, 160862.0, 161988.0, 163114.0, 164240.0, 165370.0, 166500.0, 167630.0, 168760.0, 169890.0], "type": "scatter"}, {"mode": "markers", "name": "India", "text": ["India 1995", "India 1996", "India 1997", "India 1998", "India 1999", "India 2000", "India 2001", "India 2002", "India 2003", "India 2004", "India 2005", "India 2006", "India 2007", "India 2008", "India 2009", "India 2010", "India 2011", "India 2012", "India 2013", "India 2014", "India 2015"], "textposition": "top center", "x": [704927138.0, 716383423.0, 727826609.0, 739222713.0, 750527164.0, 761703316.0, 772342667.0, 782001991.0, 791442131.0, 800648753.0, 809635580.0, 818392527.0, 826885768.0, 835057853.0, 842861327.0, 850238363.0, 857150489.0, 863545492.0, 869499014.0, 875088795.0, 880378073.0], "y": [646645.0, 648096.0, 649547.0, 650998.0, 652449.0, 653900.0, 658538.0, 663176.0, 667814.0, 672452.0, 677090.0, 681252.0, 685414.0, 689576.0, 693738.0, 697900.0, 699684.0, 701468.0, 703252.0, 705036.0, 706820.0], "type": "scatter"}, {"mode": "markers", "name": "Italy", "text": ["Italy 1995", "Italy 1996", "Italy 1997", "Italy 1998", "Italy 1999", "Italy 2000", "Italy 2001", "Italy 2002", "Italy 2003", "Italy 2004", "Italy 2005", "Italy 2006", "Italy 2007", "Italy 2008", "Italy 2009", "Italy 2010", "Italy 2011", "Italy 2012", "Italy 2013", "Italy 2014", "Italy 2015"], "textposition": "top center", "x": [18802959.0, 18774128.0, 18749929.0, 18721181.0, 18690180.0, 18664484.0, 18640786.0, 18611507.0, 18626218.0, 18678509.0, 18702115.0, 18689801.0, 18715453.0, 18770433.0, 18787007.0, 18774936.0, 18737779.0, 18719287.0, 18861658.0, 18953446.0, 18848343.0], "y": [79795.0, 80574.0, 81353.0, 82132.0, 82911.0, 83690.0, 84470.0, 85250.0, 86030.0, 86810.0, 87590.0, 88128.0, 88666.0, 89204.0, 89742.0, 90280.0, 90818.0, 91356.0, 91894.0, 92432.0, 92970.0], "type": "scatter"}, {"mode": "markers", "name": "Germany", "text": ["Germany 1995", "Germany 1996", "Germany 1997", "Germany 1998", "Germany 1999", "Germany 2000", "Germany 2001", "Germany 2002", "Germany 2003", "Germany 2004", "Germany 2005", "Germany 2006", "Germany 2007", "Germany 2008", "Germany 2009", "Germany 2010", "Germany 2011", "Germany 2012", "Germany 2013", "Germany 2014", "Germany 2015"], "textposition": "top center", "x": [21819475.0, 21926962.0, 22009929.0, 22067414.0, 22114521.0, 22142025.0, 22141424.0, 22128364.0, 22091923.0, 22040918.0, 21973977.0, 21834702.0, 21640169.0, 21434841.0, 21218431.0, 21024031.0, 20479754.0, 20357384.0, 20250111.0, 20169501.0, 20175776.0], "y": [113270.0, 113324.0, 113378.0, 113432.0, 113486.0, 113540.0, 113600.0, 113660.0, 113720.0, 113780.0, 113840.0, 113890.0, 113940.0, 113990.0, 114040.0, 114090.0, 114110.0, 114130.0, 114150.0, 114170.0, 114190.0], "type": "scatter"}, {"mode": "markers", "name": "United Kingdom", "text": ["United Kingdom 1995", "United Kingdom 1996", "United Kingdom 1997", "United Kingdom 1998", "United Kingdom 1999", "United Kingdom 2000", "United Kingdom 2001", "United Kingdom 2002", "United Kingdom 2003", "United Kingdom 2004", "United Kingdom 2005", "United Kingdom 2006", "United Kingdom 2007", "United Kingdom 2008", "United Kingdom 2009", "United Kingdom 2010", "United Kingdom 2011", "United Kingdom 2012", "United Kingdom 2013", "United Kingdom 2014", "United Kingdom 2015"], "textposition": "top center", "x": [12559379.0, 12556499.0, 12554474.0, 12556019.0, 12563329.0, 12572963.0, 12562339.0, 12439896.0, 12323786.0, 12220136.0, 12131582.0, 12048279.0, 11970758.0, 11893520.0, 11813186.0, 11736055.0, 11658619.0, 11571796.0, 11484083.0, 11407453.0, 11337632.0], "y": [28660.0, 28836.0, 29012.0, 29188.0, 29364.0, 29540.0, 29674.0, 29808.0, 29942.0, 30076.0, 30210.0, 30286.0, 30362.0, 30438.0, 30514.0, 30590.0, 30760.0, 30930.0, 31100.0, 31270.0, 31440.0], "type": "scatter"}, {"mode": "markers", "name": "China", "text": ["China 1995", "China 1996", "China 1997", "China 1998", "China 1999", "China 2000", "China 2001", "China 2002", "China 2003", "China 2004", "China 2005", "China 2006", "China 2007", "China 2008", "China 2009", "China 2010", "China 2011", "China 2012", "China 2013", "China 2014", "China 2015"], "textposition": "top center", "x": [831819843.0, 828956742.0, 825589438.0, 821328874.0, 815968942.0, 809645853.0, 800082679.0, 788406300.0, 775926016.0, 762817902.0, 749352182.0, 735901746.0, 722214159.0, 708173810.0, 693852712.0, 679206337.0, 664363135.0, 649832871.0, 635688202.0, 621970693.0, 608629709.0], "y": [1670705.5, 1690565.4, 1710425.3, 1730285.2, 1750145.1, 1770005.0, 1802091.8, 1834178.6, 1866265.4, 1898352.2, 1930439.0, 1945571.8, 1960704.6, 1975837.4, 1990970.2, 2006103.0, 2021525.0, 2036947.0, 2052369.0, 2067791.0, 2083213.0], "type": "scatter"}, {"mode": "markers", "name": "Japan", "text": ["Japan 1995", "Japan 1996", "Japan 1997", "Japan 1998", "Japan 1999", "Japan 2000", "Japan 2001", "Japan 2002", "Japan 2003", "Japan 2004", "Japan 2005", "Japan 2006", "Japan 2007", "Japan 2008", "Japan 2009", "Japan 2010", "Japan 2011", "Japan 2012", "Japan 2013", "Japan 2014", "Japan 2015"], "textposition": "top center", "x": [27576510.0, 27484192.0, 27389665.0, 27304928.0, 27196540.0, 27082249.0, 25442515.0, 23389981.0, 21461733.0, 19624090.0, 17916330.0, 16548143.0, 15343480.0, 14203467.0, 13133781.0, 12138475.0, 11187944.0, 10335396.0, 9569845.0, 8882592.0, 8266708.0], "y": [249130.0, 249056.0, 248982.0, 248908.0, 248834.0, 248760.0, 248878.0, 248996.0, 249114.0, 249232.0, 249350.0, 249412.0, 249474.0, 249536.0, 249598.0, 249660.0, 249644.0, 249628.0, 249612.0, 249596.0, 249580.0], "type": "scatter"}], "layout": {"title": "Rural Population versus <br> Forested Area (Square Km) 1990-2015", "xaxis": {"title": "Rural Population"}, "yaxis": {"title": "Forest Area (square km)"}}}, {"data": [{"x": ["India", "China", "United States", "Brazil", "Germany", "Italy", "France", "United Kingdom", "Japan", "Canada"], "y": [880378073.0, 608629709.0, 58990425.0, 29479357.0, 20175776.0, 18848343.0, 13644609.0, 11337632.0, 8266708.0, 6511484.0], "type": "bar"}], "layout": {"title": "Rural Population in 2015", "xaxis": {"title": "Country"}, "yaxis": {"title": "Rural Population"}}}];
+        var ids = ['figure-0', 'figure-1', 'figure-2', 'figure-3', 'figure-4'];
+        for(var i in figures) {
+            Plotly.plot(ids[i],
+                figures[i].data,
+                figures[i].layout || {});
+        }
+    </script>
+    
+</footer>
+
+
+</html>
